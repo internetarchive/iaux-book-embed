@@ -1,4 +1,4 @@
-import { html, css, LitElement } from 'lit-element';
+import { html, css, LitElement, CSSResult } from 'lit-element';
 import { property, customElement } from 'lit/decorators.js';
 import { archiveLogo } from './assets/archive-logo';
 
@@ -17,33 +17,38 @@ export class IABookEmbed extends LitElement {
     `;
   }
 
-  static styles = css`
-    :host {
-      padding: 0 10px;
-      background: var(--secondaryBGColor, #222);
-      display: flex;
-      justify-content: center;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-    .embed-link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--primaryTextColor, #fff);
-      font-size: 1.4rem;
-      height: 3.4rem;
-    }
-    .embed-link .title {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      overflow: hidden;
-    }
-    .embed-link svg {
-      margin-right: 0.5rem;
-    }
-    .embed-link:hover {
-      text-decoration: underline;
-    }
-  `;
+  static get styles(): CSSResult {
+    const embedBGColorCss = css`var(--secondaryBGColor, #222)`;
+    const embedTextColorCss = css`var(--primaryTextColor, #fff)`;
+
+    return css`
+      :host {
+        padding: 0 10px;
+        background: ${embedBGColorCss};
+        display: flex;
+        justify-content: center;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .embed-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: ${embedTextColorCss};
+        font-size: 1.4rem;
+        height: 3.4rem;
+      }
+      .embed-link .title {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .embed-link svg {
+        margin-right: 0.5rem;
+      }
+      .embed-link:hover {
+        text-decoration: underline;
+      }
+    `;
+  }
 }

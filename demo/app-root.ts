@@ -38,7 +38,14 @@ export class AppRoot extends LitElement {
       display: block;
     }
     fieldset {
-      width: 300px;
+      max-width: 300px;
+    }
+    ia-book-embed {
+      --white: #fff;
+      --black: #000;
+      --primaryBGColor: var(--black);
+      --primaryTextColor: var(--white);
+      --secondaryBGColor: #222;
     }
   `;
 }
