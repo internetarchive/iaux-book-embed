@@ -21,3 +21,6 @@
 /out-tsc/
 
 storybook-static
+
+## yarn
+yarn-error.log

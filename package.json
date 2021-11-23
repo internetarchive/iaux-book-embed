@@ -1,6 +1,6 @@
 {
-  "name": "@internetarchive/your-webcomponent",
-  "description": "The Internet Archive Typescript WebComponent template. It is based on the @open-wc template.",
+  "name": "@internetarchive/ia-book-embed",
+  "description": "Embed view for book items",
   "license": "AGPL-3.0-only",
   "author": "Internet Archive",
   "version": "0.0.0",
@@ -18,7 +18,8 @@
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.0.2",
+    "lit-element": "^2.4.0"
   },
   "devDependencies": {
     "@open-wc/eslint-config": "^7.0.0",
