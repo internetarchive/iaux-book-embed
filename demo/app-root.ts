@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
-import { IABookEmbed } from '../src/ia-book-embed';
+import '../src/ia-book-embed';
+import type { IABookEmbed } from '../src/ia-book-embed';
 
 @customElement('app-root')
 export class AppRoot extends LitElement {
@@ -18,7 +19,7 @@ export class AppRoot extends LitElement {
   render() {
     return html`
       <div class="ia-book-embed-container">
-        <ia-book-embed> </ia-book-embed>
+        <ia-book-embed></ia-book-embed>
       </div>
 
       <br />
